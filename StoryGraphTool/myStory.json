@@ -1,0 +1,196 @@
+{
+    "Title": "Mysterious Mansion",
+    "Credits": "Created by Varsana Ilango Gomathynaveena (vilangog@ucsc.edu).",
+    "InitialLocation": "Entrance",
+    "Locations": {
+        "Entrance": {
+            "Body": "You stand before the towering gates of a mansion. There is a strange silence which is broken by the sound of the gates opening.",
+            "Choices": [
+                {
+                    "Text": "Enter the mansion",
+                    "Target": "Foyer"
+                }
+            ]
+        },
+        "Foyer": {
+            "Body": "You step into the grand foyer of the mansion. As you walk, you see the flickering light of old chandeliers. There are huge portraits lining the walls of people you don't recognize.",
+            "Choices": [
+                {
+                    "Text": "Investigate the Study",
+                    "Target": "Study"
+                }
+            ]
+        },
+        "Study": {
+            "Body": "You enter the study, filled with shelves of dusty, old books and other things. As you look through it, you spot an ancient clock with its hands frozen in time.",
+            "Choices": [
+                {
+                    "Text": "Inspect the clock",
+                    "Target": "Clock"
+                },
+                {
+                    "Text": "Continue exploring",
+                    "Target": "Foyer"
+                }
+            ]
+        },
+        "Clock": {
+            "Body": "As you continue walking, you see an ancient clock. You notice its engravings. You reach to change the clock's hands...",
+            "Choices": [
+                {
+                    "Text": "Set the clock to midnight",
+                    "Target": "Midnight"
+                },
+                {
+                    "Text": "Set the clock to noon",
+                    "Target": "Noon"
+                }
+            ]
+        },
+        "Midnight": {
+            "Body": "As you turn the clock to midnight, you suddenly feel like you are surrounded by darkness. A shadow appears on the walls, and you hear faint whispers.",
+            "Choices": [
+                {
+                    "Text": "Explore the revealed passages",
+                    "Target": "HiddenClues"
+                },
+                {
+                    "Text": "Change the clock",
+                    "Target": "Clock"
+                }
+            ]
+        },
+        "Noon": {
+            "Body": "As the clock chimes noon, a light enters the mansion, and shadows start to disappear, revealing hidden clues scattered throughout the rooms.",
+            "Choices": [
+                {
+                    "Text": "Search for hidden clues",
+                    "Target": "HiddenClues"
+                },
+                {
+                    "Text": "Change the clock",
+                    "Target": "Clock"
+                }
+            ]
+        },
+        "HiddenClues": {
+            "Body": "You discover hidden messages and symbols on the walls, each providing a piece of the mansion's history.",
+            "Choices": [
+                {
+                    "Text": "Piece together the clues",
+                    "Target": "CluePuzzle"
+                }
+            ]
+        },
+        "CluePuzzle": {
+            "Body": "You realize that to open the door to the next room, you need to find three hidden objects scattered throughout the mansion.",
+            "Objects": [
+                {
+                    "Name": "Ancient Key",
+                    "Description": "An old, rusty key with intricate engravings.",
+                    "Found": false
+                },
+                {
+                    "Name": "Crystal Orb",
+                    "Description": "A translucent orb emitting a faint glow.",
+                    "Found": false
+                },
+                {
+                    "Name": "Scroll",
+                    "Description": "A fragile scroll with faded writing.",
+                    "Found": false
+                }
+            ],
+            "Choices": [
+                {
+                    "Text": "Search for the Ancient Key",
+                    "Target": "SearchKey"
+                },
+                {
+                    "Text": "Search for the Crystal Orb",
+                    "Target": "SearchOrb"
+                },
+                {
+                    "Text": "Search for the Scroll",
+                    "Target": "SearchScroll"
+                },
+                {
+                    "Text": "Proceed to Next Room",
+                    "Target": "NextRoom",
+                    "Disabled": true
+                }
+            ]
+        },
+        "SearchKey": {
+            "Body": "You search the mansion's rooms and discover the Ancient Key hidden behind a painting.",
+            "Choices": [
+                {
+                    "Text": "Continue",
+                    "Target": "CluePuzzle"
+                }
+            ]
+        },
+        "SearchOrb": {
+            "Body": "You explore the mansion's chambers and find the Crystal Orb tucked away in a dusty corner.",
+            "Choices": [
+                {
+                    "Text": "Continue",
+                    "Target": "CluePuzzle"
+                }
+            ]
+        },
+        "SearchScroll": {
+            "Body": "You investigate the mansion's library and uncover the Tattered Scroll hidden among old manuscripts.",
+            "Choices": [
+                {
+                    "Text": "Continue",
+                    "Target": "CluePuzzle"
+                }
+            ]
+        },
+        "NextRoom": {
+            "Body": "You enter a dimly lit chamber, filled with ancient artifacts and whispers. You feel someone's presence in the shadows.",
+            "Choices": [
+                {
+                    "Text": "Confront the presence",
+                    "Target": "Confrontation"
+                }
+            ]
+        },
+        "Confrontation": {
+            "Body": "You confront the spirit haunting the mansion, piecing together its tragic past and you decide to...",
+            "Choices": [
+                {
+                    "Text": "Banish the spirit",
+                    "Target": "SpiritBanished"
+                },
+                {
+                    "Text": "Spare the spirit",
+                    "Target": "SpareSpirit"
+                }
+            ]
+        },
+        "SpiritBanished": {
+            "Body": "With a final incantation, you banish the spirit from the mansion, bringing peace to its soul and lifting the curse on the mansion.",
+            "Choices": [
+                {
+                    "Text": "Escape the mansion",
+                    "Target": "Escape"
+                }
+            ]
+        },
+        "SpareSpirit": {
+            "Body": "Moved by the spirit's plight, you choose to spare it, offering forgiveness. The mansion begins to shimmer.",
+            "Choices": [
+                {
+                    "Text": "Escape the mansion",
+                    "Target": "Escape"
+                }
+            ]
+        },
+        "Escape": {
+            "Body": "You step outside the mansion. As you step outside, you feel a sense of closure.",
+            "Choices": []
+        }
+    }
+}
